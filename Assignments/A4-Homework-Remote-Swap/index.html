@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Remote Swap</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			.remote {
+				border: solid teal 10px;
+				width: 960px;
+				height: 320px;
+				margin: 25px auto;
+				background-color: white;
+			}
+			/*Thumbnails on the right or left*/
+			.remote .thumbs {
+				width: 320px;
+			}
+			.remote .thumbs img {
+			float: left;
+			margin-right: 0;
+			margin-bottom: 0;
+			}
+
+			/*Large opposite of the thumbnails (e.g. right or left)*/
+			.remote .large {}
+
+		</style>
+	</head>
+	<body>
+		<h1>Remote Swap</h1>
+
+		<div class="remote">
+			<div class="thumbs">
+				<!-- Thumbnails Go Here -->
+				<img src="img/small/1_80x80.jpg">
+				<img src="img/small/2_80x80.jpg">
+				<img src="img/small/3_80x80.jpg">
+				<img src="img/small/4_80x80.jpg">
+				<img src="img/small/5_80x80.jpg">
+				<img src="img/small/6_80x80.jpg">
+				<img src="img/small/7_80x80.jpg">
+				<img src="img/small/8_80x80.jpg">
+				<img src="img/small/9_80x80.jpg">
+				<img src="img/small/10_80x80.jpg">
+				<img src="img/small/11_80x80.jpg">
+				<img src="img/small/12_80x80.jpg">
+				<img src="img/small/13_80x80.jpg">
+				<img src="img/small/14_80x80.jpg">
+				<img src="img/small/15_80x80.jpg">
+				<img src="img/small/16_80x80.jpg">
+			</div>
+			<div class="large">
+				<!-- Large Goes Here -->
+				<img src="img/large/1_640x320.jpg" class="large">
+			</div>
+		</div>
+
+		<script>
+			// Your script goes here.
+			var large = document.querySelectorAll('img.large');
+			var thumbs = document.querySelectorAll('.thumbs img');
+
+			console.log('Large Array', large);
+			console.log('Large', large[0]);
+		 	console.log('Thumbnails', thumbs);
+			console.log('Thumb 1', thumbs[0]);
+
+			thumbs[1].addEventListener('mouseover', function() {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/2_640x320.jpg';
+				});
+
+				thumbs[2].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/3_640x320.jpg';
+				});
+
+				thumbs[3].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/4_640x320.jpg';
+				});
+
+				thumbs[4].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/5_640x320.jpg';
+				});
+
+				thumbs[5].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/6_640x320.jpg';
+				});
+
+				thumbs[6].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/7_640x320.jpg';
+				});
+
+				thumbs[7].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/8_640x320.jpg';
+				});
+
+				thumbs[8].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/9_640x320.jpg';
+				});
+
+				thumbs[9].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/10_640x320.jpg';
+				});
+
+				thumbs[10].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/11_640x320.jpg';
+				});
+
+				thumbs[11].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/12_640x320.jpg';
+				});
+
+				thumbs[12].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/13_640x320.jpg';
+				});
+
+				thumbs[13].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/14_640x320.jpg';
+				});
+
+				thumbs[14].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/15_640x320.jpg';
+				});
+
+				thumbs[15].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/16_640x320.jpg';
+				});
+
+				thumbs[0].addEventListener('mouseover', function () {
+					console.log('you got me! Partner!!');
+					large[0].src = 'img/large/1_640x320.jpg';
+				});
+
+		</script>
+	</body>
+</html>
