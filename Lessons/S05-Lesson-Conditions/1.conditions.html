@@ -1,72 +1,118 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Conditions</title>
-		<style>
-			body {
-			    background-color: #365634;
-			}
-			h1 {
-			    margin: 50px 20px 100px;
-			}
-			.container {
-				background-color: white;
-				padding: 20px;
-				width: 300px;
-				margin: auto;
-			}
-			header {
-				background-color: #eee;
-				padding: 20px;
-			}
-			.departure-details {
-				background-color: goldenrod;
-				padding: 20px;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Conditions</h1>
 
-		<div class="container">
-			<header>
-				<h2>Your Flight Is Booked</h2>
-				<button class="product">
+<head>
+	<meta charset="utf-8">
+	<title>Conditions</title>
+	<style>
+		body {
+			background-color: #365634;
+		}
+
+		h1 {
+			margin: 50px 20px 100px;
+		}
+
+		.container {
+			background-color: white;
+			padding: 20px;
+			width: 300px;
+			margin: auto;
+		}
+
+		header {
+			background-color: #eee;
+			padding: 20px;
+		}
+
+		.departure-details {
+			background-color: goldenrod;
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Conditions</h1>
+
+	<div class="container">
+		<header>
+			<h2>Your Flight Is Booked</h2>
+			<button class="product">
 					<span>Show</span> Departure Details
 				</button>
-			</header>
-			<div class="departure-details">
-				<p>
-					<span>Departure Airport: </span>
-					<span>LAX</span>
-				</p>
-				<p>
-					<span>Departure Time: </span>
-					<span>08:00</span>
-				</p>
-			</div>
+		</header>
+		<div class="departure-details">
+			<p>
+				<span>Departure Airport: </span>
+				<span>LAX</span>
+			</p>
+			<p>
+				<span>Departure Time: </span>
+				<span>08:00</span>
+			</p>
 		</div>
+	</div>
 
 
-		<script>
-			/*-------------------------------------
-			| Review
-			-------------------------------------*/
+	<script>
+		/*-------------------------------------
+		| Review
+	  -------------------------------------*/
 
 
-			/*-------------------------------------
-			| Conditions
-			-------------------------------------*/
+		/*-------------------------------------
+		| Conditions
+		-------------------------------------*/
+		var weather = 'han solo';
+
+		if (weather == 'sunny') {
+			console.log('bring your umbrella');
+		} else //if the above proves false, do this instead
+		{
+			console.log('bring your sunscreen');
+		}
+
+		/*-------------------------------------
+		| Toggle Element Examples
+		-------------------------------------*/
+		// 0. Grabs some toys
+		var button = document.querySelector('button.product');
+		var departureDetails = document.querySelector('div.departure-details');
+		var showHideText = document.querySelector('button.product span');
+
+		console.log('Button', button);
+		console.log('Show Hide Text', showHideText);
+		console.log('Depart Details', departureDetails);
+
+		//1. hide the departure-details
+
+		//2. when user clicks on button (toggle)
+		button.addEventListener('click', function(){
+			console.log('you clicked me!!');
+
+			if (departureDetails.style.display == 'none')
+			{
+				console.log('Do A');
+			//a. shows departure-details
+						departureDetails.style.display = 'block';
+						//change name to 'hide'
+						showHideText.innerHTML = 'Hide';
+			}
+			else
+			{
+				console.log('Do B');
+
+			//b. hides departure-details
+						departureDetails.style.display = 'none';
+						//change name to 'show'
+						showHideText.innerHTML = 'Show';
+
+			}	// here ends our IF statement
+		}); // here ends addEventListener
+	</script>
 
 
-			/*-------------------------------------
-			| Toggle Element Examples
-			-------------------------------------*/
+</body>
 
-
-		</script>
-
-
-	</body>
 </html>

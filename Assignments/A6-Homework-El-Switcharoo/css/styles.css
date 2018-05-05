@@ -1,0 +1,73 @@
+body {
+  background-color: #333;
+  color: #a57af4;
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+}
+
+#stage {
+  border: solid #b597ed 10px;
+  width: 960px;
+  height: 600px;
+  margin: 25px auto;
+  background-color: #333;
+  position: relative;
+
+	display: flex;
+}
+
+.set {
+	width: 320px;
+/*  outline: solid 1px red; */
+
+  position: relative;
+}
+
+.set img {
+	max-width: 100%;
+}
+.set .button {
+ /* outline: solid 2px green; */
+
+  width: 100px;
+  height: 100px;
+
+	position: absolute;
+	bottom: 0px; right: 110px;
+ }
+.set .button img {
+  width: 100px;
+
+	position: absolute;
+	left: 0px; top:0px;
+}
+.sphere {
+/*  outline: solid 2px blue; */
+  width: 250px;
+  height: 250px;
+
+  position: absolute;
+  left: 30px; top: 290px;
+}
+.sphere img {
+  position: absolute;
+  left: 0px; top:0px;
+
+  width: 250px;
+  height: 250px;
+}
+
+div.set img.ok {
+  display: none;
+  left: -1px; top:1px;
+}
+div.set.on img.ok {display: block;}
+
+div.set img.color { display: none;}
+div.set.on img.color { display: block;}
+
+div.set div.sphere {
+  transition: all 1s;
+  top: 290px;
+}
+div.set.on div.sphere { top: 0px;}

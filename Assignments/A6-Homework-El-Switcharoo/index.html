@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>El Switcharoo</title>
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+	<h1>El Switcharoo</h1>
+
+	<div id="stage">
+		<div class="set set1">
+			<div class="button">
+				<img class="notok" src="img/notok.png" />
+				<img class="ok" src="img/ok.png" />
+			</div>
+
+			<div class="sphere">
+				<img class="grey" src="img/grey1.png" />
+				<img class="color" src="img/color1.png" />
+			</div>
+
+		</div>
+
+		<div class="set set2">
+			<div class="button">
+				<img class="notok" src="img/notok.png" />
+				<img class="ok" src="img/ok.png" />
+			</div>
+
+			<div class="sphere">
+				<img class="grey" src="img/grey2.png" />
+				<img class="color" src="img/color2.png" />
+			</div>
+
+		</div>
+
+		<div class="set set3">
+			<div class="button">
+				<img class="notok" src="img/notok.png" />
+				<img class="ok" src="img/ok.png" />
+			</div>
+
+			<div class="sphere">
+				<img class="grey" src="img/grey3.png" />
+				<img class="color" src="img/color3.png" />
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+
+	var theButtons = document.querySelectorAll('.set .button');
+	var theSets = document.querySelectorAll('.set');
+
+	console.log('buttons', theButtons);
+	console.log('sets', theSets);
+
+	theButtons[0].addEventListener('click', function() {
+		console.log('Ouch you clicked me');
+		theSets[0].classList.toggle('on');
+	});
+
+		theButtons[1].addEventListener('click', function() {
+		console.log('Ouch you clicked me');
+		theSets[1].classList.toggle('on');
+	});
+
+		theButtons[2].addEventListener('click', function() {
+		console.log('Ouch you clicked me');
+		theSets[2].classList.toggle('on');
+	});
+	</script>
+
+</body>
+
+</html>
